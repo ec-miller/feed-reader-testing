@@ -63,7 +63,7 @@ $(function() {
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
-        it('is hidden',function() {
+        it('is hidden on page load',function() {
             const body = $(".menu-hidden")
             console.log(body);
             expect(body[0]).toBeDefined();
@@ -74,6 +74,24 @@ $(function() {
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
+        menuIcon = $('.menu-icon-link');
+        
+
+        it('is visible on 1st click', function () {
+            menuIcon.click();
+            const body = $(".menu-hidden")
+            console.log(body);
+            expect(body[0]).not.toBeDefined();
+        });
+
+        it('is hidden on 2nd click', function () {
+            menuIcon.click();
+            const body = $(".menu-hidden")
+            console.log(body);
+            expect(body[0]).toBeDefined();
+        });
+
+
 
     });
 
