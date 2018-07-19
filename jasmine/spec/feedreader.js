@@ -10,7 +10,7 @@
  */
 $(function() {
 
-    //confirm that RSS feeds are populated adequately
+    //confirm that RSS feeds are populated adequately in app.js
     describe('RSS Feeds', function() {
 
         it('are defined', function() {
@@ -34,8 +34,8 @@ $(function() {
 
     });
 
-    //conrfirm that menu functions as desired
-    describe('The menu', function() {
+    //conrfirm that menu functions as desired (show/hide behavior)
+    describe('The Menu', function() {
 
         it('is hidden on page load',function() {
             const body = $(".menu-hidden")
@@ -73,7 +73,7 @@ $(function() {
         })
     })
 
-    //load feed 1 result into x and feed 2 result into y
+    //load feed 1 result into x and feed 0 result into y
     //confirm that the results are different
     describe('New Feed Selection', function() {
 
