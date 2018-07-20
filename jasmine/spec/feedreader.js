@@ -62,13 +62,11 @@ $(function() {
     describe('Initial Entries', function() {
 
         beforeEach(function (done) {
-            loadFeed(0, function () {
-                done();
-            });
+            loadFeed(0, done);
         });
 
         it('are populated', function() {
-            const entries = $(".entry")
+            const entries = $(".feed .entry");
             expect(entries.length).toBeGreaterThan(0);
         })
     })
